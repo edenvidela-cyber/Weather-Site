@@ -1,0 +1,82 @@
+<!-- index.html -->
+ <!-- html with external javascript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WeatherVane | Professional Forecast</title>
+    <meta name="description" content="This is a home page for my website where users will come first.">
+    <meta name="keywords" content="homepage, demo, fswad">
+    
+    <!-- meta tag so that the media in css can work -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="Weatherman.css">
+    
+    <script src="jquery-3.7.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+    <script src="Owl-wisdom.js" defer></script>
+    <link href="Weathervaneicon.png" rel="Icon">
+
+</head>
+<body>
+<div class="container">
+    <header>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="main-wrapper">
+        <header>
+            <div class="controls">
+                <input type="text" id="city_name" placeholder="Search City (e.g. Toronto)">
+                <button id="Fetch_weather">Update Dashboard</button>
+                <input type="number" id="Celcius" name="user_val" placeholder="Temperature in Celsius (e.g. 25)">
+                <button id="Cel_Fah">Convert to Fahrenheit</button>
+                <span id="calc_result" class="result-display"></span>
+            </div>
+            <p id="error_log" class="hidden"></p>
+        </header>
+<!-- Info Hub with greetings, colors, and messages -->
+<section class="info-hub">
+    <div class="tile greeting-tile">
+        <div class="greeting-content">
+            <img id="greeting_icon" src="" alt="Greeting icon" class="tile-icon">
+            <h2 id="user_greeting_text">Welcome</h2>
+        </div>
+        <p id="current_date"></p>
+    </div>
+    <div class="tile color-tile">
+        <h3>Color of the Day</h3>
+        <div id="daily_color_swatch"></div>
+        <p id="daily_color_name"></p>
+    </div>
+    <div class="tile message-tile">
+        <h3>Daily Inspiration</h3>
+        <p id="motivational_quote">"Stay focused and keep building."</p>
+    </div>
+    <div class="tile charity-tile">
+        <h3>Make an Impact</h3>
+        <a href="https://www.charitynavigator.org/" target="_blank" id="charity_link">
+            <img id="charity_icon" src="images/Charity.png" alt="Charity badge" class="charity-badge">
+            Support a Cause
+        </a>
+    </div>
+</section>
+
+        <main id="dashboard_results">
+            </main>
+        </div>
+    
+    <p id="error_message"></p>
+    </div>
+    </header>
+</div>
+    <footer>
+        <p>Copyright &copy; 2026</p>
+        <p>credits: Icons created by Freepik - Flaticon,
+           Weather Api provided by OpenWeatherMap,
+           Owl Carousel provided by Owl Carousel Team.
+        </p>
+    </footer>
+</body>
+</html>
